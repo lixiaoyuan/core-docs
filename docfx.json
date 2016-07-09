@@ -6,7 +6,7 @@
           "files": [
             "corefx/src/**/ref/**/*.csproj"
           ],
-          "exclude": [ "**/bin/**", "**/obj/**", "**System.Runtime.WindowsRuntime.csproj"  ],
+          "exclude": [ "**/bin/**", "**/obj/**"],
           "cwd": ".."
         }
       ],
@@ -17,9 +17,9 @@
         {
           "files": [
             "corefx/src/**/src/**/*.csproj",
-            "coreclr/src/mscorlib/mscorlib.csproj"
+            "coreclr/src/mscorlib/System.Private.CoreLib.csproj"
           ],
-          "exclude": [ "**/bin/**", "**/obj/**", "**System.Runtime.WindowsRuntime.csproj"  ],
+          "exclude": [ "**/bin/**", "**/obj/**"],
           "cwd": ".."
         }
       ],
@@ -30,24 +30,35 @@
     "content":
       [
         {
-          "files": ["api/**/*.yml"]
+          "files": ["*.yml"],
+          "src": "api_ref",
+          "dest": "core/api"
         },
         {
-          "files": [
-            "docs/**/*.md",
-            "api/*.md"
-          ]
+          "files": ["**/*.md"],
+          "src": "docs",
+          "dest": "articles"
         },
         {
-          "files": ["toc.yml"]
+          "files": ["*.md"],
+          "src": "api",
+          "dest": "core/api"
+        },
+        {
+          "files": ["toc.yml", "index.md"]
         }
       ],
     "resource":
       [
         {
           "files": [
-            "docs/images/**",
             "images/**"
+          ],
+          "src": "docs",
+          "dest": "articles",
+          "exclude": [
+            "**/obj/**",
+            "_themes/DocPacker/**"
           ]
         }
       ],
@@ -55,9 +66,10 @@
     "externalReference": [
     ],
     "globalMetadata": {
-      "_appTitle": "CoreCLR site"
+      "breadcrumb_path": "/dotnet/toc.json",
+      "_displayLangs": ["csharp"]
     },
     "dest": "_site",
-    "template": [ "default", "template" ]
+    "template": [ "docs.html" ]
   }
 }

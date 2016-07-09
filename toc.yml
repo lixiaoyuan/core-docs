@@ -1,12 +1,14 @@
-﻿- name: Getting started
-  href: http://dotnet.github.io/getting-started/
-- name: About
-  href: http://dotnet.github.io/about/
-- name: Documentation
-  href: docs/
-  homepage: docs/index.md
-- name: API reference
-  href: api/
-  homepage: api/index.md
-- name: Support
-  href: http://dotnet.github.io/support/
+- name: Docs
+  href: /
+  homepage: /
+  items:
+  - name: .NET Home
+    href: /dotnet/
+    homepage: /dotnet/index
+    items:
+    - name: Documentation
+      href: /dotnet/articles/
+      homepage: /dotnet/articles/welcome
+    - name: API reference
+      href: /dotnet/core/api/
+      homepage: /dotnet/core/api/index

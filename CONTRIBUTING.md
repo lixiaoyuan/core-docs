@@ -3,34 +3,32 @@ Contributing
 
 In this document: 
 
-* [Adding content](#Adding content)
-* [Process for contributing](#Process for contributing) 
-* [Guidance checklist](#Guidance checklist)
-* [Building the docs](#Building the docs)
-* [Contributing to samples](#Contributing to samples)
+* [Adding content](#adding-content)
+* [Process for contributing](#process-for-contributing) 
+* [Guidance checklist](#guidance-checklist)
+* [Building the docs](#building-the-docs)
+* [Contributing to samples](#contributing-to-samples)
 
 ## Adding content ##
 
-Before adding content, submit an issue with a suggestion for your proposed
-article. Provide detail on what the article would discuss, and how it would
-relate to existing documentation.
+Before adding content, please submit an issue describing your content proposal. For smaller changes or additions, feel free to make a pull request.
 
 Articles should be organized into logical groups or sections. Each section
 should be given a named folder (e.g. /yourfirst). That section contains the
-rst files for all articles in the section. For images and other static
+Markdown files for all articles in the section. For images and other static
 resources, create a subfolder that matches the name of the article. Within this
 subfolder, create a ``sample`` folder for code samples and a  ``_static`` folder
  for images and other static content.
 
-### Example Structure ###
+### Example structure ###
 
-	docs
-		/concepts
-    /getting-started
-    /porting
-      /_static
-        portability_report.png
-					...
+    docs
+      /concepts
+      /getting-started
+      /porting
+        /_static
+          portability_report.png
+	  ...
 
 Author information is kept in the Markdown file itself. Each author should have a link to an online presence for himself/herself. 
 
@@ -89,7 +87,7 @@ After build completes, you can preview the resulting site locally using built-in
 
 	docfx serve _site
 	
-This will start the local preview on localhost:8080. You can then view the changes by going to http://localhost:8080/docs/[path] (i.e. http://localhost:8080/docs/getting-started/).   
+This will start the local preview on localhost:8080. You can then view the changes by going to http://localhost:8080/docs/[path] (e.g. http://localhost:8080/docs/getting-started/).   
 
 ## Contributing to samples
 
